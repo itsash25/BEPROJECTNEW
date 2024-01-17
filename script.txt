@@ -1,0 +1,71 @@
+function toggleDropdown() {
+    var dropdown = document.getElementById("dropdown");
+    dropdown.classList.toggle("show");
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('.fa-bars')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+
+function redirectToDailyPass() {
+    window.location.href = 'dailyPass.html';
+}
+function redirectToBookTicket() {
+    window.location.href = 'bookTicketnew.html';
+}
+function booknow1() {
+    window.location.href = "confirm_booking.html";    
+}
+
+let upFair1 = document.getElementById("updateFair1");
+let selPass1 = document.getElementById("selectOptions1");
+selPass1.addEventListener('change', () => {
+    var selectedValue1 = selPass1.value;
+    upFair1.innerHTML = 40 * selectedValue1;
+    var fareValue1 = 40 * selectedValue1;
+    localStorage.setItem("selectedValue1",selectedValue1);
+    localStorage.setItem("fareValue1",fareValue1);
+});
+
+
+// Retrieve values from localStorage
+var selectedValue1 = localStorage.getItem("selectedValue1");
+var fareValue1 = localStorage.getItem("fareValue1");
+
+console.log(selectedValue1);    
+
+
+// Update elements on confirm_booking.html  
+document.getElementById("ticket").innerHTML = selectedValue1;
+document.getElementById("rs").innerText =fareValue1;
+
+// let ticket = document.getElementById("ticket");
+// let rs = document.getElementById("rs");
+// ticket.innerHTML = selectedValue1; // Assuming ticket is a span or div, use innerHTML
+// rs.innerHTML = fareValue1; 
+
+
+
+
+// let upFair2=document.getElementById("updateFair2");
+// let selPass2=document.getElementById("selectOptions2");
+// selPass2.addEventListener('change',()=>{
+//     const selectedValue2=selPass2.value;
+//     upFair2.innerHTML=50*selectedValue2;
+// })
+
+// let upFair3=document.getElementById("updateFair3");
+// let selPass3=document.getElementById("selectOptions3");
+// selPass3.addEventListener('change',()=>{
+//     const selectedValue3=selPass3.value;
+//     upFair3.innerHTML=80*selectedValue3;
+// })

@@ -1,0 +1,80 @@
+body {
+  /* background-color: #b3e0f2; */
+}
+
+.dailyPass {
+  border: 1px solid grey;
+  padding: 1rem 0.5rem;
+  margin: 2rem;
+  height: 15rem;
+  width: 22rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: white;
+}
+
+.dailyPass button {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: 0.3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
+  text-align: center;
+  padding: 17px 48px;
+  color: #fff;
+  background-color: #72cb81;
+  height: 48px;
+}
+button:hover {
+  transform: scale(1.04);
+  background-color: #62a26d;
+}
+
+label {
+  /* margin-top: 2rem; */
+  font-size: 1.6rem;
+  /* margin-bottom: 0.7rem; */
+}
+select {
+  border-radius: 0.8rem;
+  border: 2px solid black;
+  padding-left: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 5rem;
+  height: 2rem;
+  margin-bottom: 1.4rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+/* .dailyPass h2 {
+  display: inline-block;
+} */
+.container3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dailyPass button {
+  padding: 4rem rem;
+}
+
+.selectTickets span {
+  font-size: 1.3rem;
+  margin-right: 0.8rem;
+  font-weight: bold;
+}
